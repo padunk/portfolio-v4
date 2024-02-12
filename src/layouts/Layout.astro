@@ -1,51 +1,57 @@
 ---
+import '@/styles/globals.css'
+import { Image } from 'astro:assets'
+import { ViewTransitions } from 'astro:transitions'
+import logo from '@/assets/images/aaa_logo_circle.png'
+
 interface Props {
-	title: string;
+  title?: string
 }
 
-const { title } = Astro.props;
+const { title = 'The man and the heron' } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link
+      href='https://unpkg.com/prismjs@v1.x/themes/prism-tomorrow.min.css'
+      rel='stylesheet'
+    />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+    <script
+      src='https://unpkg.com/htmx.org@1.9.10'
+      integrity='sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC'
+      crossorigin='anonymous'></script>
+  </head>
+  <body class='flex items-center min-h-screen w-svw'>
+    <div class='flex gap-12 w-full px-12 flex-wrap lg:px-24 lg:gap-24'>
+      <header class='min-h-56 flex items-center p-6 lg:min-h-svh'>
+        <nav class='flex flex-col gap-6 text-xl'>
+          <a href='/'>
+            <Image
+              src={logo}
+              alt='abraham anak agung logo'
+              width={30}
+              height={30}
+            />
+          </a>
+          <a href='/blog'>Blog</a>
+          <a href='/projects'>Projects</a>
+        </nav>
+      </header>
+      <slot />
+    </div>
+    <script src='https://unpkg.com/prismjs@v1.x/components/prism-core.min.js'
+    ></script>
+    <script
+      src='https://unpkg.com/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js'
+    ></script>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>

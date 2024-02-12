@@ -1,0 +1,10 @@
+---
+import { Code as ECCode } from 'astro-expressive-code/components'
+
+const { node } = Astro.props
+const { code, language } = node
+---
+
+<div class='my-6'>
+  <ECCode code={code} lang={language} />
+</div>

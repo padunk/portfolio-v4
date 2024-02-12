@@ -1,0 +1,73 @@
+---
+import { sanityClient } from 'sanity:client'
+import { PortableText } from 'astro-portabletext'
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import Layout from '@/layouts/Layout.astro'
+
+const posts = await sanityClient
+  .fetch(
+    `*[_type == "post" && defined(slug.current) && publishedAt < now()] | order(publishedAt desc) {
+        body,
+        publishedAt,
+        slug,
+        title,
+        excerpt,
+        _createdAt,
+        "categoryList": categories[]->title,
+        "cover": {
+            "src": mainImage.asset->url,
+            "alt": mainImage.alt,
+            "caption": mainImage.caption
+        },
+        "authorList": authors[]{
+            "name": author->name,
+            "src": author->image.asset->url,
+            "alt": author->image.alt
+        }
+    }[0...20]`
+  )
+  .catch((err) => console.error(err.message))
+
+console.log('posts :>> ', posts)
+---
+
+<Layout>
+  <main class='flex flex-col gap-24 flex-1 items-center p-6 justify-center'>
+    <div class='text-center'>
+      <h1 class='text-2xl'>THE BLOG</h1>
+      <sub>yeah... I used <i>The</i> sue me!</sub>
+    </div>
+    <div>
+      <ul class='flex flex-col gap-6'>
+        {
+          posts.map((post) => {
+            return (
+              <li class=''>
+                <a href={'/blog/' + post.slug.current}>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>{post.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription>
+                        <PortableText value={post.excerpt} />
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </a>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </div>
+  </main>
+</Layout>
