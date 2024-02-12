@@ -4,6 +4,7 @@ import { loadEnv } from "vite";
 import react from "@astrojs/react";
 import { sanityIntegration as sanity } from "@sanity/astro";
 import tailwind from "@astrojs/tailwind";
+import vercel from "@astrojs/vercel/serverless";
 const { SANITY_PROJECT_ID, SANITY_DATASET } = loadEnv(
   process.env.NODE_ENV,
   process.cwd(),
@@ -26,4 +27,6 @@ export default defineConfig({
       themes: ["dracula"],
     }),
   ],
+  output: "server",
+  adapter: vercel(),
 });
