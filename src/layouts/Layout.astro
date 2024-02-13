@@ -17,20 +17,16 @@ const defaultNavLinkClass = 'text-opacity-50 hover:text-opacity-90'
 <html lang='en'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='description' content='Astro description' />
+    <meta name='description' content='Abraham Anak Agung personal website' />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <link
-      href='https://unpkg.com/prismjs@v1.x/themes/prism-tomorrow.min.css'
-      rel='stylesheet'
-    />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
-    <script
+    <!-- <script
       src='https://unpkg.com/htmx.org@1.9.10'
       integrity='sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC'
-      crossorigin='anonymous'></script>
+      crossorigin='anonymous'></script> -->
   </head>
   <body class='flex items-center min-h-screen w-svw'>
     <div class='flex gap-12 w-full px-12 flex-wrap lg:px-24 lg:gap-24'>
@@ -74,10 +70,5 @@ const defaultNavLinkClass = 'text-opacity-50 hover:text-opacity-90'
         <slot />
       </main>
     </div>
-    <script src='https://unpkg.com/prismjs@v1.x/components/prism-core.min.js'
-    ></script>
-    <script
-      src='https://unpkg.com/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js'
-    ></script>
   </body>
 </html>
