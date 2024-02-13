@@ -6,29 +6,24 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout>
-  <main
-    class='flex flex-1 items-center p-6 justify-center'
-    transition:animate='slide'
-  >
-    <div>
-      <div class='flex flex-col justify-center items-center mb-12'>
-        <div class='mb-4'>
-          <Image
-            src={logo}
-            alt='abraham anak agung logo'
-            width={60}
-            height={60}
-          />
-        </div>
-        <h1 class='text-3xl'>Abraham Anak Agung</h1>
+  <div>
+    <div class='flex flex-col justify-center items-center mb-12'>
+      <div class='mb-4'>
+        <Image
+          src={logo}
+          alt='abraham anak agung logo'
+          width={80}
+          height={80}
+        />
       </div>
-      <div class='text-center leading-6 tracking-wide max-w-prose'>
-        <p>
-          Web and Native developer with over 5 years of experience. I love
-          creating strong web and mobile apps from ideas. Experience leading
-          teams in designing efficient ecosystems and user-friendly experiences.
-        </p>
-      </div>
+      <h1 class='text-4xl'>Abraham Anak Agung</h1>
     </div>
-  </main>
+    <div class='text-center leading-6 tracking-wide max-w-prose'>
+      <p>
+        Web and Native developer with over 5 years of experience. I love
+        creating strong web and mobile apps from ideas. Experience leading teams
+        in designing efficient ecosystems and user-friendly experiences.
+      </p>
+    </div>
+  </div>
 </Layout>

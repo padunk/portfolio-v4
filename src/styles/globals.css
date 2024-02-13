@@ -1,7 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+@font-face {
+  font-family: "NotoMusic";
+  src: url("/fonts/NotoMusic-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer base {
   :root {
@@ -49,7 +55,7 @@
     --ring: 20.5 90.2% 48.2%;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;

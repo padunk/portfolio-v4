@@ -74,23 +74,19 @@ const components = {
 ---
 
 <Layout>
-  <main
-    class='flex flex-col gap-24 flex-1 items-center p-6 justify-center mb-24'
-  >
-    <article>
-      <div class='my-24'>
-        <h1 class='text-3xl text-center capitalize'>
-          {post.title}
-        </h1>
-      </div>
-      <div class='max-w-prose'>
-        <PortableText value={post.body} components={components} />
-      </div>
-    </article>
-    <div>
-      <Button id='go-back'>Back</Button>
+  <article>
+    <div class='my-24'>
+      <h1 class='text-3xl text-center capitalize'>
+        {post.title}
+      </h1>
     </div>
-  </main>
+    <div class='max-w-prose'>
+      <PortableText value={post.body} components={components} />
+    </div>
+  </article>
+  <div>
+    <Button id='go-back'>Back</Button>
+  </div>
 </Layout>
 
 <script>

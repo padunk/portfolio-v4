@@ -39,34 +39,32 @@ console.log('posts :>> ', posts)
 ---
 
 <Layout>
-  <main class='flex flex-col gap-24 flex-1 items-center p-6 justify-center'>
-    <div class='text-center'>
-      <h1 class='text-2xl'>THE BLOG</h1>
-      <sub>yeah... I used <i>The</i> sue me!</sub>
-    </div>
-    <div>
-      <ul class='flex flex-col gap-6'>
-        {
-          posts.map((post) => {
-            return (
-              <li class=''>
-                <a href={'/blog/' + post.slug.current}>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>{post.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription>
-                        <PortableText value={post.excerpt} />
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                </a>
-              </li>
-            )
-          })
-        }
-      </ul>
-    </div>
-  </main>
+  <div class='text-center mt-16'>
+    <h1 class='text-2xl'>THE BLOG</h1>
+    <sub><em>The experience in a text.</em></sub>
+  </div>
+  <div>
+    <ul class='flex flex-col gap-6'>
+      {
+        posts.map((post) => {
+          return (
+            <li class=''>
+              <a href={'/blog/' + post.slug.current}>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>{post.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription>
+                      <PortableText value={post.excerpt} />
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </a>
+            </li>
+          )
+        })
+      }
+    </ul>
+  </div>
 </Layout>

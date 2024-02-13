@@ -1,0 +1,102 @@
+[
+  {
+    "id": "01",
+    "title": "ideas",
+    "projects": [
+      {
+        "id": "01AN",
+        "title": "anancio",
+        "description": "Smart Ads Generator and Editor",
+        "link": "",
+        "result": ""
+      },
+      {
+        "id": "02CA",
+        "title": "carin.me",
+        "description": "message from the past",
+        "link": "",
+        "result": ""
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "title": "todo",
+    "projects": [
+      {
+        "id": "01",
+        "title": "anancio",
+        "description": "Smart Ads Generator and Editor",
+        "link": "",
+        "result": ""
+      },
+      {
+        "id": "02",
+        "title": "carin.me",
+        "description": "message from the past",
+        "link": "",
+        "result": ""
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "title": "working",
+    "projects": [
+      {
+        "id": "01",
+        "title": "anancio",
+        "description": "Smart Ads Generator and Editor",
+        "link": "",
+        "result": ""
+      },
+      {
+        "id": "02",
+        "title": "carin.me",
+        "description": "message from the past",
+        "link": "",
+        "result": ""
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "title": "done",
+    "projects": [
+      {
+        "id": "01",
+        "title": "anancio",
+        "description": "Smart Ads Generator and Editor",
+        "link": "",
+        "result": ""
+      },
+      {
+        "id": "02",
+        "title": "carin.me",
+        "description": "message from the past",
+        "link": "",
+        "result": ""
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "title": "result",
+    "projects": [
+      {
+        "id": "01",
+        "title": "anancio",
+        "description": "Smart Ads Generator and Editor",
+        "link": "",
+        "result": ""
+      },
+      {
+        "id": "02",
+        "title": "carin.me",
+        "description": "message from the past",
+        "link": "",
+        "result": ""
+      }
+    ]
+  }
+]

@@ -46,7 +46,11 @@ const { title = 'The man and the heron' } = Astro.props
           <a href='/projects'>Projects</a>
         </nav>
       </header>
-      <slot />
+      <main
+        class='flex flex-col gap-24 flex-1 items-center p-6 justify-center mb-24'
+      >
+        <slot />
+      </main>
     </div>
     <script src='https://unpkg.com/prismjs@v1.x/components/prism-core.min.js'
     ></script>
