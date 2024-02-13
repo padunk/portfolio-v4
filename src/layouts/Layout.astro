@@ -58,8 +58,10 @@ const defaultNavLinkClass = 'text-opacity-50 hover:text-opacity-90'
       crossorigin='anonymous'></script> -->
 
   <body class='flex items-center min-h-screen w-svw'>
-    <div class='flex gap-12 w-full px-12 flex-wrap lg:px-24 lg:gap-24'>
-      <header class='min-h-56 flex items-center p-6 lg:min-h-svh'>
+    <div
+      class='flex w-full flex-wrap min-h-svh sm:px-12 sm:gap-12 lg:px-24 lg:gap-24'
+    >
+      <header class='flex items-center p-6 max-h-svh'>
         <nav class='flex flex-col gap-6 text-xl'>
           <a href='/'>
             <Image
@@ -94,7 +96,7 @@ const defaultNavLinkClass = 'text-opacity-50 hover:text-opacity-90'
         </nav>
       </header>
       <main
-        class='flex flex-col gap-24 flex-1 items-center p-6 justify-center mb-24'
+        class='flex flex-col gap-24 flex-1 items-center p-6 justify-center mb-24 min-w-96'
       >
         <slot />
       </main>

@@ -2,7 +2,7 @@
 import Layout from '@/layouts/Layout.astro'
 import CustomCard from '@/components/CustomCard.tsx'
 import columns from '@/data/projects.json'
-import { Code } from 'astro:components'
+import ProTip from '@/components/ProTip.tsx'
 ---
 
 <Layout>
@@ -10,17 +10,10 @@ import { Code } from 'astro:components'
     <h2 class='text-2xl'>THE PROJECTS</h2>
     <sub><em>Becoming indie maker.</em></sub>
   </div>
-  <div>
-    <small class='mb-2 block pl-2'>
-      Pro tip:
-      <em>
-        Hold
-        <Code code='shift' lang='bash' inline theme='dracula' />
-        when scrolling below.
-      </em>
-    </small>
+  <div class='w-full'>
+    <ProTip client:load />
     <div
-      class='flex gap-6 overflow-x-auto max-w-screen-lg shadow-inner drop-shadow-sm p-6 bg-neutral-100'
+      class='flex gap-6 overflow-x-auto max-w-screen-lg min-w-96 shadow-inner drop-shadow-sm p-6 bg-neutral-100'
     >
       <CustomCard columns={columns} client:load />
     </div>
