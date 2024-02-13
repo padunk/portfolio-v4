@@ -19,15 +19,44 @@ const defaultNavLinkClass = 'text-opacity-50 hover:text-opacity-90'
     <meta charset='UTF-8' />
     <meta name='description' content='Abraham Anak Agung personal website' />
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='author' content='Abraham Anak Agung' />
+    <meta
+      http-equiv='Content-Security-Policy'
+      content="default-src * 'unsafe-inline'; img-src 'self' http://*; style-src 'self' http://* 'unsafe-inline'; script-src-elem 'self' 'unsafe-inline' blob:"
+    />
+    <meta name='twitter:creator' content='@anakagungcorp' />
+    <meta name='twitter:url' content='https://anakagung.com/' />
+    <meta name='twitter:site' content='@anakagungcorp' />
+    <meta name='twitter:description' content='Web and Native Developer' />
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:title' />
+    <meta
+      property='og:image'
+      content='https://res.cloudinary.com/padunk/image/upload/v1611980928/my_portfolio/Screenshot_2021-01-11_11.26_edited_uu9kwi.jpg'
+    />
+    <meta
+      name='twitter:image'
+      content='https://res.cloudinary.com/padunk/image/upload/v1611980928/my_portfolio/Screenshot_2021-01-11_11.26_edited_uu9kwi.jpg'
+    />
+    <meta
+      name='twitter:image:src'
+      content='https://res.cloudinary.com/padunk/image/upload/v1611980928/my_portfolio/Screenshot_2021-01-11_11.26_edited_uu9kwi.jpg'
+    />
+    <meta property='og:title' />
+    <meta name='og:description' content='Web and Native Developer' />
+    <meta name='theme-color' content='#ea2465' />
+    <link rel='manifest' href='manifest.json' crossorigin='use-credentials' />
+    <link rel='icon' type='image/png' href='favicon.png' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions />
-    <!-- <script
+  </head>
+
+  <ViewTransitions />
+  <!-- <script
       src='https://unpkg.com/htmx.org@1.9.10'
       integrity='sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC'
       crossorigin='anonymous'></script> -->
-  </head>
+
   <body class='flex items-center min-h-screen w-svw'>
     <div class='flex gap-12 w-full px-12 flex-wrap lg:px-24 lg:gap-24'>
       <header class='min-h-56 flex items-center p-6 lg:min-h-svh'>
