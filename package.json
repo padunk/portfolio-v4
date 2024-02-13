@@ -23,7 +23,6 @@
     "@types/react-dom": "^18.2.19",
     "astro": "^4.3.5",
     "astro-expressive-code": "^0.32.4",
-    "astro-icon": "latest",
     "astro-portabletext": "^0.9.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",

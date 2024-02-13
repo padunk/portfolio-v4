@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
-import icon from "astro-icon";
+// import icon from "astro-icon";
 import { loadEnv } from "vite";
 import react from "@astrojs/react";
 import { sanityIntegration as sanity } from "@sanity/astro";
@@ -30,7 +30,7 @@ export default defineConfig({
     expressiveCode({
       themes: ["dracula"],
     }),
-    icon(),
+    // icon(),
   ],
   output: "server",
   adapter: vercel(),

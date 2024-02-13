@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
-import { Icon } from 'astro-icon/components'
+// import { Icon } from 'astro-icon/components'
+import { Github, Twitter, Codepen } from 'lucide-react'
 import logo from '@/assets/images/aaa_logo_circle.png'
 
 import Layout from '../layouts/Layout.astro'
@@ -25,7 +26,7 @@ import Layout from '../layouts/Layout.astro'
             target='_blank'
             rel='noopener noreferrer'
           >
-            <Icon name='devicon:github' width={20} height={20} />
+            <Github />
           </a>
         </li>
         <li>
@@ -34,7 +35,7 @@ import Layout from '../layouts/Layout.astro'
             target='_blank'
             rel='noopener noreferrer'
           >
-            <Icon name='devicon:twitter' width={20} height={20} />
+            <Twitter />
           </a>
         </li>
         <li>
@@ -43,7 +44,7 @@ import Layout from '../layouts/Layout.astro'
             target='_blank'
             rel='noopener noreferrer'
           >
-            <Icon name='devicon:codepen' width={20} height={20} />
+            <Codepen />
           </a>
         </li>
       </ul>
