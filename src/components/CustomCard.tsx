@@ -1,4 +1,10 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 type Project = {
   id: string;
@@ -27,7 +33,10 @@ export default function CustomCard({ columns }: { columns: ProjectData[] }) {
               <CardContent>
                 {column.projects.map((project) => {
                   return (
-                    <Card key={column.id} className="mb-6 min-w-[240px]">
+                    <Card
+                      key={column.id}
+                      className="mb-6 min-w-[240px] transition-transform duration-300 hover:scale-105 hover:shadow-md"
+                    >
                       <CardHeader>
                         <CardTitle className="capitalize">
                           {project.title}
@@ -36,7 +45,7 @@ export default function CustomCard({ columns }: { columns: ProjectData[] }) {
                           {project.description}
                         </CardDescription>
                       </CardHeader>
-                      <CardContent className="flex flex-col gap-6">
+                      <CardContent className="flex flex-col gap-6 text-neutral-400 text-sm">
                         {project.link ? (
                           <a
                             href={project.link}

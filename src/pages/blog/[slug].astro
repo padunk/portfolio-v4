@@ -1,9 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import type { Post } from '@/types'
 import { PortableText } from 'astro-portabletext'
-import { sanityClient } from 'sanity:client'
-import Image from '@/portabletext/Image.astro'
+import Image from '@/components/Image.astro'
 import Title from '@/components/Title.astro'
 import Code from '@/components/Code.astro'
 import BlockQuote from '@/components/BlockQuote.astro'
@@ -11,11 +9,10 @@ import Paragraph from '@/components/Paragraph.astro'
 import List from '@/components/List.astro'
 import ListItem from '@/components/ListItem.astro'
 import { Button } from '@/components/ui/button'
+import { getPost, getPosts } from '@/utils'
 
 export async function getStaticPaths() {
-  const posts = await sanityClient.fetch<Post[]>(
-    `*[_type == "post" && defined(slug.current) && publishedAt < now()] | order(publishedAt desc){ slug }`
-  )
+  const posts = await getPosts()
   return posts.map((post) => ({
     params: {
       slug: post.slug.current,
@@ -24,33 +21,10 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params
-const filter = '*[_type == "post" && slug.current == $slug][0]'
-const projection = `{
-  ...,
-  body[]{
-    ...,
-    children[]{
-    ...,
-    _type == 'authorReference' => {
-      _type,
-      author->
-    }
-    }
-  },
-      "authorList": authors[].author->name,
-      "coverImage": {
-          "alt": mainImage.alt,
-          "caption": mainImage.caption,
-          "url": mainImage.asset->url
-      }
-  }`
+const post = await getPost(slug)
 
-const query = filter + projection
-const post = await sanityClient.fetch<Post, { slug: string }>(query, { slug })
-// console.log('post :>> ', post)
 const components = {
   type: {
-    mainImage: Image,
     code: Code,
   },
   block: {
@@ -75,6 +49,15 @@ const components = {
 
 <Layout>
   <article>
+    <div class='flex justify-center items-center'>
+      {
+        post.mainImage ? (
+          <Image asset={post.mainImage} alt={post.mainImage.alt} />
+        ) : (
+          ''
+        )
+      }
+    </div>
     <div class='my-24'>
       <h1 class='text-3xl text-center capitalize'>
         {post.title}
@@ -85,7 +68,7 @@ const components = {
     </div>
   </article>
   <div>
-    <Button id='go-back'>Back</Button>
+    <Button id='go-back' client:visible>Back</Button>
   </div>
 </Layout>
 

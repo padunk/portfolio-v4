@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
 import logo from '@/assets/images/aaa_logo_circle.png'
 
 import Layout from '../layouts/Layout.astro'
@@ -8,7 +9,7 @@ import Layout from '../layouts/Layout.astro'
 <Layout>
   <div>
     <div class='flex flex-col justify-center items-center mb-12'>
-      <div class='mb-4'>
+      <div class='mb-6'>
         <Image
           src={logo}
           alt='abraham anak agung logo'
@@ -17,6 +18,35 @@ import Layout from '../layouts/Layout.astro'
         />
       </div>
       <h1 class='text-4xl'>Abraham Anak Agung</h1>
+      <ul class='flex gap-6 mt-4'>
+        <li>
+          <a
+            href='https://github.com/padunk'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <Icon name='devicon:github' width={20} height={20} />
+          </a>
+        </li>
+        <li>
+          <a
+            href='https://twitter.com/anakagungcorp'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <Icon name='devicon:twitter' width={20} height={20} />
+          </a>
+        </li>
+        <li>
+          <a
+            href='https://codepen.io/padunk'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <Icon name='devicon:codepen' width={20} height={20} />
+          </a>
+        </li>
+      </ul>
     </div>
     <div class='text-center leading-6 tracking-wide max-w-prose'>
       <p>

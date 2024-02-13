@@ -9,6 +9,8 @@ interface Props {
 }
 
 const { title = 'The man and the heron' } = Astro.props
+const { pathname } = Astro.url
+const defaultNavLinkClass = 'text-opacity-50 hover:text-opacity-90'
 ---
 
 <!doctype html>
@@ -42,8 +44,28 @@ const { title = 'The man and the heron' } = Astro.props
               height={30}
             />
           </a>
-          <a href='/blog'>Blog</a>
-          <a href='/projects'>Projects</a>
+          <a
+            href='/blog'
+            class:list={[
+              defaultNavLinkClass,
+              {
+                'text-primary': pathname.includes('/blog'),
+              },
+            ]}
+          >
+            Blog
+          </a>
+          <a
+            href='/projects'
+            class:list={[
+              defaultNavLinkClass,
+              {
+                'text-primary': pathname.includes('/projects'),
+              },
+            ]}
+          >
+            Projects
+          </a>
         </nav>
       </header>
       <main

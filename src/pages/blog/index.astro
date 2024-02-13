@@ -1,7 +1,4 @@
 ---
-import { sanityClient } from 'sanity:client'
-import { PortableText } from 'astro-portabletext'
-
 import {
   Card,
   CardContent,
@@ -10,32 +7,28 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import Layout from '@/layouts/Layout.astro'
+import { getPosts } from '@/utils'
+import type { Post } from '@/types'
+import { PortableText } from 'astro-portabletext'
+import { X } from 'lucide-react'
 
-const posts = await sanityClient
-  .fetch(
-    `*[_type == "post" && defined(slug.current) && publishedAt < now()] | order(publishedAt desc) {
-        body,
-        publishedAt,
-        slug,
-        title,
-        excerpt,
-        _createdAt,
-        "categoryList": categories[]->title,
-        "cover": {
-            "src": mainImage.asset->url,
-            "alt": mainImage.alt,
-            "caption": mainImage.caption
-        },
-        "authorList": authors[]{
-            "name": author->name,
-            "src": author->image.asset->url,
-            "alt": author->image.alt
-        }
-    }[0...20]`
-  )
-  .catch((err) => console.error(err.message))
+const postsStatus = {
+  message: '',
+  status: 'loading',
+}
 
-console.log('posts :>> ', posts)
+let posts = [] as Post[]
+try {
+  posts = await getPosts()
+  postsStatus.message = ''
+  postsStatus.status = 'success'
+} catch (err) {
+  if (err instanceof Error) {
+    postsStatus.message = err.message
+    postsStatus.status = 'error'
+    console.error(err.message)
+  }
+}
 ---
 
 <Layout>
@@ -46,24 +39,33 @@ console.log('posts :>> ', posts)
   <div>
     <ul class='flex flex-col gap-6'>
       {
-        posts.map((post) => {
-          return (
-            <li class=''>
-              <a href={'/blog/' + post.slug.current}>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>{post.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription>
-                      <PortableText value={post.excerpt} />
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </a>
-            </li>
-          )
-        })
+        postsStatus.status === 'success' && posts.length > 1 ? (
+          posts.map((post) => {
+            return (
+              <li class=''>
+                <a href={'/blog/' + post.slug.current}>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>{post.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription>
+                        <PortableText value={post.excerpt!} />
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </a>
+              </li>
+            )
+          })
+        ) : postsStatus.status === 'loading' ? (
+          <p>Loading</p>
+        ) : (
+          <p>
+            Error getting posts. Please kindly <X /> me at{' '}
+            <a href='https://twitter.com/anakaagungcorp'>anakagungcorp</a>
+          </p>
+        )
       }
     </ul>
   </div>

@@ -1,8 +1,7 @@
 ---
-// @ts-nocheck
-import { imageUrlFor } from '@/lib/sanity'
-
-type Asset = Parameters<typeof imageUrlFor>[0]
+import { urlFor } from '@/utils'
+import { Image as ImageAstro } from 'astro:assets'
+type Asset = Parameters<typeof urlFor>[0]
 
 export interface Props {
   asset: Asset
@@ -10,7 +9,14 @@ export interface Props {
 }
 
 const { asset, alt } = Astro.props
-const image = imageUrlFor(asset)
+const image = urlFor(asset).url()
 ---
 
-<img src={image} alt={alt} />
+<ImageAstro
+  src={image}
+  alt={alt}
+  width={650}
+  height={400}
+  quality='mid'
+  format='webp'
+/>
