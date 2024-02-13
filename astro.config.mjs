@@ -24,8 +24,8 @@ export default defineConfig({
       projectId: SANITY_PROJECT_ID,
       dataset: SANITY_DATASET,
       useCdn: false,
-      studioBasePath: "/admin",
-      apiVersion: "2023-03-20",
+      // studioBasePath: "/admin",
+      // apiVersion: "2023-03-20",
     }),
     expressiveCode({
       themes: ["dracula"],
