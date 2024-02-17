@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets'
+import logo from '@/assets/images/aaa_logo_circle.png'
+const { pathname } = Astro.url
+const defaultNavLinkClass = 'text-opacity-50 hover:text-opacity-90'
+---
+
+<header class='flex items-center p-6 max-h-svh'>
+  <nav class='flex flex-col gap-6 text-xl'>
+    <a href='/'>
+      <Image
+        src={logo}
+        alt='abraham anak agung logo'
+        width={30}
+        height={30}
+        format='png'
+      />
+    </a>
+    <a
+      href='/blog'
+      class:list={[
+        defaultNavLinkClass,
+        {
+          'text-primary': pathname.includes('/blog'),
+        },
+      ]}
+    >
+      Blog
+    </a>
+    <a
+      href='/projects'
+      class:list={[
+        defaultNavLinkClass,
+        {
+          'text-primary': pathname.includes('/projects'),
+        },
+      ]}
+    >
+      Projects
+    </a>
+    <!-- <a
+      href='/wander'
+      class:list={[
+        defaultNavLinkClass,
+        {
+          'text-primary': pathname.includes('/wander'),
+        },
+      ]}
+    >
+      Wander
+    </a> -->
+  </nav>
+</header>

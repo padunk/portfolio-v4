@@ -1,6 +1,6 @@
 [
   {
-    "id": "01",
+    "id": "01ID",
     "title": "ideas",
     "projects": [
       {
@@ -8,35 +8,42 @@
         "title": "whisper",
         "description": "social media platform that only exist for a day",
         "link": "",
-        "result": "vote it"
+        "result": "in research..."
       },
       {
         "id": "01FI",
         "title": "tydiet",
         "description": "track your daily diet",
         "link": "",
-        "result": "vote it"
+        "result": "in research..."
       },
       {
         "id": "01ST",
         "title": "coswap",
         "description": "collaborative storytelling and writing",
         "link": "",
-        "result": "vote it"
+        "result": "in research..."
       },
       {
         "id": "01HE",
         "title": "menhattan",
         "description": "mental health assessment tool",
         "link": "",
-        "result": "vote it"
+        "result": "in research..."
       },
       {
         "id": "02HE",
         "title": "primedico",
         "description": "personalized healthcare record",
         "link": "",
-        "result": "vote it"
+        "result": "in research..."
+      },
+      {
+        "id": "01TL",
+        "title": "talons",
+        "description": "bragging platform for developer",
+        "link": "",
+        "result": "in research..."
       }
     ]
   },
@@ -73,7 +80,7 @@
       {
         "id": "PO04",
         "title": "portfolio",
-        "description": "This site use Astro, Shadcn, deploy with Vercel",
+        "description": "This site use Astro, Shadcn, Sanity, and deploy with Vercel",
         "link": "https://anakagung.com",
         "result": "Upgrading personal portfolio from Sapper."
       }
