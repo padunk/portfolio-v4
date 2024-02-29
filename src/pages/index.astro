@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 // import { Icon } from 'astro-icon/components'
-import { Github, Twitter, Codepen } from 'lucide-react'
+import { Github, Twitter, Codepen, MonitorDown } from 'lucide-react'
 import logo from '@/assets/images/aaa_logo_circle.png'
 
 import Layout from '@/layouts/Layout.astro'
@@ -25,6 +25,7 @@ import Layout from '@/layouts/Layout.astro'
             href='https://github.com/padunk'
             target='_blank'
             rel='noopener noreferrer'
+            title='Github'
           >
             <Github />
           </a>
@@ -34,6 +35,7 @@ import Layout from '@/layouts/Layout.astro'
             href='https://x.com/anakagungcorp'
             target='_blank'
             rel='noopener noreferrer'
+            title='Twitter'
           >
             <Twitter />
           </a>
@@ -43,13 +45,23 @@ import Layout from '@/layouts/Layout.astro'
             href='https://codepen.io/padunk'
             target='_blank'
             rel='noopener noreferrer'
+            title='Codepen'
           >
             <Codepen />
           </a>
         </li>
+        <li>
+          <a
+            href='Resume_AbrahamAgung.pdf'
+            download='Resume_AbrahamAgung.pdf'
+            title='Download resume'
+          >
+            <MonitorDown />
+          </a>
+        </li>
       </ul>
     </div>
-    <div class='text-center leading-6 tracking-wide max-w-prose'>
+    <div class='text-center leading-6 tracking-wide max-w-prose mb-12'>
       <p>
         Web and Native developer with over 5 years of experience. I love
         creating strong web and mobile apps from ideas. Experience leading teams
