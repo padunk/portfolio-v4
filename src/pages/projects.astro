@@ -2,7 +2,6 @@
 import Layout from '@/layouts/Layout.astro'
 import CustomCard from '@/components/CustomCard.tsx'
 import columns from '@/data/projects.json'
-import ProTip from '@/components/ProTip.tsx'
 ---
 
 <Layout>
@@ -11,11 +10,27 @@ import ProTip from '@/components/ProTip.tsx'
     <sub><em>Becoming indie maker.</em></sub>
   </div>
   <div class='w-full'>
-    <ProTip client:load />
+    <small class='mb-2 pl-2 block'>
+      <span>Pro tip:</span>
+      <span id='pro-tip'>hold `Shift` when scrolling 🤯</span>
+    </small>
     <div
       class='flex gap-6 overflow-x-auto max-w-screen-lg min-w-96 shadow-inner drop-shadow-sm p-6 bg-neutral-100'
     >
       <CustomCard columns={columns} client:load />
     </div>
   </div>
+
+  <script is:inline>
+    const regex =
+      /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+    const isMobile = regex.test(window.navigator.userAgent)
+    const proTipElement = document.getElementById('pro-tip')
+
+    if (isMobile) {
+      proTipElement.textContent = 'scroll left... 🤭'
+    } else {
+      proTipElement.textContent = 'hold `Shift` when scrolling 🤯'
+    }
+  </script>
 </Layout>
