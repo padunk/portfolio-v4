@@ -49,25 +49,25 @@ const components = {
 ---
 
 <Layout>
-  <article class='w-full'>
-    <div class='flex justify-center items-center'>
-      {
-        post.mainImage ? (
-          <Image asset={post.mainImage} alt={post.mainImage.alt} />
-        ) : (
-          ''
-        )
-      }
-    </div>
-    <div class='my-24'>
-      <h1 class='text-3xl text-center capitalize'>
-        {post.title}
-      </h1>
-    </div>
-    <div class='max-w-prose mx-auto'>
-      <PortableText value={post.body} components={components} />
-    </div>
-  </article>
+  {
+    post && (
+      <article class='w-full'>
+        <div class='flex justify-center items-center'>
+          {post.mainImage ? (
+            <Image asset={post.mainImage} alt={post.mainImage.alt} />
+          ) : (
+            ''
+          )}
+        </div>
+        <div class='my-24'>
+          <h1 class='text-3xl text-center capitalize'>{post.title}</h1>
+        </div>
+        <div class='max-w-prose mx-auto'>
+          <PortableText value={post.body} components={components} />
+        </div>
+      </article>
+    )
+  }
   <div>
     <a href='/blog' class='flex gap-2 items-center'>
       <ArrowLeftCircle size='20' />
