@@ -83,6 +83,27 @@
         "description": "This site use Astro, Shadcn, Sanity, and deploy with Vercel",
         "link": "https://anakagung.com",
         "result": "Upgrading personal portfolio from Sapper."
+      },
+      {
+        "id": "BT01",
+        "title": "Big Text",
+        "description": "Big text for simple presentation or checking grammar",
+        "link": "https://bigtextboks.netlify.app/",
+        "result": "Done"
+      },
+      {
+        "id": "GROQ01",
+        "title": "GROG of Thrones",
+        "description": "Learn GROQ (Graph Relational Object Queries) with 10 simple lessons",
+        "link": "https://groq-of-thrones.netlify.app/",
+        "result": "Done. Need updating."
+      },
+      {
+        "id": "CAN01",
+        "title": "Create App Now",
+        "description": "One create to rule them all",
+        "link": "https://www.npmjs.com/package/create-app-now",
+        "result": "Done. Need updating."
       }
     ]
   },
