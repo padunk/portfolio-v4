@@ -8,4 +8,5 @@ export interface Post {
   excerpt?: PortableTextBlock[];
   mainImage?: ImageAsset & { alt: string; caption: string };
   body: PortableTextBlock[];
+  publishedAt?: string;
 }

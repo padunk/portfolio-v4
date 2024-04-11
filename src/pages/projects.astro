@@ -5,33 +5,20 @@ import columns from '@/data/projects.json'
 ---
 
 <Layout>
-  <div style={{ textAlign: 'center' }} class='mt-2 xl:mt-16'>
-    <h2 style={{ fontSize: '1.5rem', lineHeight: '2rem' }}>THE PROJECTS</h2>
+  <div
+    style='text-align: center; margin-bottom: 6.25rem;'
+    class='mt-2 xl:mt-16'
+  >
+    <h2 style='font-size: 1.5rem; line-height: 2rem;'>THE PROJECTS</h2>
     <sub><em>Becoming indie maker.</em></sub>
   </div>
-  <div
-    style={{
-      width: '100%',
-      marginTop: '1rem',
-    }}
-  >
-    <small
-      style={{
-        display: 'block',
-        marginBottom: '0.5rem',
-        paddingLeft: '0.5rem',
-      }}
-    >
+  <div style='width: 100%; margin-top: 1rem;'>
+    <small style='display: block; margin-bottom: 0.5rem; padding-left: 0.5rem;'>
       <span>Pro tip:</span>
       <span id='pro-tip'>hold `Shift` when scrolling 🤯</span>
     </small>
     <div
-      style={{
-        display: 'flex',
-        columnGap: '1.5rem',
-        overflowX: 'auto',
-        padding: '1.5rem',
-      }}
+      style='display: flex; column-gap: 1.5rem; overflow-x: auto; padding: 1.5rem;'
       class='shadow-inner drop-shadow-sm bg-neutral-100'
     >
       <CustomCard columns={columns} client:load />

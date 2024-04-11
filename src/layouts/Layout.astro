@@ -11,7 +11,7 @@ const { title = 'The man and the heron' } = Astro.props
 ---
 
 <!doctype html>
-<html lang='en' style={{ minHeight: '100dvh' }}>
+<html lang='en' style='min-height: 100dvh;'>
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content='Abraham Anak Agung personal website' />
@@ -56,25 +56,12 @@ const { title = 'The man and the heron' } = Astro.props
 
   <body id='heron'>
     <div
-      style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        width: '100%',
-        minHeight: '100dvh',
-      }}
+      style='display: flex; flex-wrap: wrap; width: 100%; min-height: 100dvh;padding-inline: 1rem;'
       class='sm:px-12 sm:gap-12 lg:px-24 lg:gap-24'
     >
       <MainNav />
       <main
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection: 'column',
-          columnGap: '6rem',
-          marginBottom: '6rem',
-          minWidth: '24rem',
-        }}
+        style='display: flex; align-items: center; justify-content: center; flex-direction: column; column-gap: 6rem; margin-bottom: 6rem; margin-inline: auto;'
       >
         <slot />
       </main>

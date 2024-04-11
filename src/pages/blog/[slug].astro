@@ -51,43 +51,27 @@ const components = {
 <Layout>
   {
     post && (
-      <article style={{ width: '100%' }}>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
+      <article style='width: 100%;'>
+        <div style='display: flex; justify-content: center; align-items: center;'>
           {post.mainImage ? (
             <Image asset={post.mainImage} alt={post.mainImage.alt} />
           ) : (
             ''
           )}
         </div>
-        <div style={{ marginBlock: '6rem' }}>
-          <h1
-            style={{
-              textAlign: 'center',
-              textTransform: 'capitalize',
-              fontSize: '1.875rem',
-              lineHeight: '2.25rem',
-            }}
-          >
+        <div style='margin-block: 6rem;'>
+          <h1 style='text-align: center; text-transform: capitalize; font-size: 1.875rem; line-height: 2.25rem;'>
             {post.title}
           </h1>
         </div>
-        <div style={{ maxWidth: '65ch', marginInline: 'auto' }}>
+        <div style='max-width: 65ch; margin-inline: auto;'>
           <PortableText value={post.body} components={components} />
         </div>
       </article>
     )
   }
-  <div>
-    <a
-      href='/blog'
-      style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}
-    >
+  <div style='margin-top: 1rem;'>
+    <a href='/blog' style='display: flex; gap: 0.5rem; align-items: center;'>
       <ArrowLeftCircle size='20' />
       Go back</a
     >
