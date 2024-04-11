@@ -1,8 +1,16 @@
 ---
-const { node } = Astro.props
+// const { node } = Astro.props
 // console.log('node :>> ', node)
 ---
 
-<h2 class='text-xl mt-6 mb-2 text-primary'>
+<h2
+  style={{
+    marginTop: '1.5rem',
+    marginBottom: '0.5rem',
+    fontSize: '1.25rem',
+    lineHeight: '1.75rem',
+  }}
+  class='text-primary'
+>
   <slot />
 </h2>

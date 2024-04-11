@@ -3,6 +3,12 @@ const { node } = Astro.props
 // console.log('node LIST:>> ', node)
 ---
 
-<ul class='list-outside list-disc pl-6'>
+<ul
+  style={{
+    listStylePosition: 'outsize',
+    listStyleType: 'disc',
+    paddingLeft: '1.5rem',
+  }}
+>
   <slot />
 </ul>

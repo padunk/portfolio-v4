@@ -1,16 +1,26 @@
 ---
 import { Image } from 'astro:assets'
 // import { Icon } from 'astro-icon/components'
-import { Github, Twitter, Codepen, MonitorDown } from 'lucide-react'
+import { Github, Twitter, Codepen, MonitorDown, Mail } from 'lucide-react'
 import logo from '@/assets/images/aaa_logo_circle.png'
 
 import Layout from '@/layouts/Layout.astro'
+
+const subject = encodeURIComponent("Hi Abraham, let's connect!")
 ---
 
 <Layout>
   <div>
-    <div class='flex flex-col justify-center items-center mb-12'>
-      <div class='mb-6'>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: '3rem',
+      }}
+    >
+      <div style={{ marginBottom: '1.5rem' }}>
         <Image
           src={logo}
           alt='abraham anak agung logo'
@@ -18,8 +28,8 @@ import Layout from '@/layouts/Layout.astro'
           height={80}
         />
       </div>
-      <h1 class='text-4xl text-center'>Abraham Anak Agung</h1>
-      <ul class='flex gap-6 mt-4'>
+      <h1 hidden>Abraham Anak Agung Portfolio</h1>
+      <ul style={{ display: 'flex', columnGap: '1.5rem', marginTop: '1rem' }}>
         <li>
           <a
             href='https://github.com/padunk'
@@ -59,13 +69,42 @@ import Layout from '@/layouts/Layout.astro'
             <MonitorDown />
           </a>
         </li>
+        <li>
+          <a
+            href=`mailto:abraham.anak.agung@gmail.com?subject=${subject}`
+            title='Mail me'
+          >
+            <Mail />
+          </a>
+        </li>
       </ul>
     </div>
-    <div class='text-center leading-6 tracking-wide max-w-prose mb-12'>
-      <p>
-        Web and Native developer with over 5 years of experience. I love
-        creating strong web and mobile apps from ideas. Experience leading teams
-        in designing efficient ecosystems and user-friendly experiences.
+    <div
+      style={{
+        textAlign: 'center',
+        marginBottom: '3rem',
+        lineHeight: '1.5rem',
+        letterSpacing: '0.025em',
+        maxWidth: '65ch',
+      }}
+    >
+      <p
+        style={{
+          fontSize: '2rem',
+          lineHeight: '2.25rem',
+          textAlign: 'center',
+          marginBottom: '1.5rem',
+        }}
+      >
+        Hi 👋🏼, I am Abraham.
+      </p>
+      <p style={{ marginTop: '0.5rem' }}>
+        I am a Human Web and Native Developer from Indonesia 🇮🇩
+      </p>
+      <p style={{ marginTop: '0.5rem' }}>
+        I love working remotely and creating strong web and mobile apps from
+        ideas. Experience leading teams in designing efficient ecosystems and
+        user-friendly experiences.
       </p>
     </div>
   </div>

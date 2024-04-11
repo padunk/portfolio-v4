@@ -51,25 +51,43 @@ const components = {
 <Layout>
   {
     post && (
-      <article class='w-full'>
-        <div class='flex justify-center items-center'>
+      <article style={{ width: '100%' }}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
           {post.mainImage ? (
             <Image asset={post.mainImage} alt={post.mainImage.alt} />
           ) : (
             ''
           )}
         </div>
-        <div class='my-24'>
-          <h1 class='text-3xl text-center capitalize'>{post.title}</h1>
+        <div style={{ marginBlock: '6rem' }}>
+          <h1
+            style={{
+              textAlign: 'center',
+              textTransform: 'capitalize',
+              fontSize: '1.875rem',
+              lineHeight: '2.25rem',
+            }}
+          >
+            {post.title}
+          </h1>
         </div>
-        <div class='max-w-prose mx-auto'>
+        <div style={{ maxWidth: '65ch', marginInline: 'auto' }}>
           <PortableText value={post.body} components={components} />
         </div>
       </article>
     )
   }
   <div>
-    <a href='/blog' class='flex gap-2 items-center'>
+    <a
+      href='/blog'
+      style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}
+    >
       <ArrowLeftCircle size='20' />
       Go back</a
     >

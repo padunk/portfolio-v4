@@ -2,11 +2,27 @@
 import { Image } from 'astro:assets'
 import logo from '@/assets/images/aaa_logo_circle.png'
 const { pathname } = Astro.url
-const defaultNavLinkClass = 'text-opacity-50 hover:text-opacity-90'
+const defaultNavLinkClass = 'text-opacity-70 hover:text-opacity-100'
 ---
 
-<header class='flex items-center p-6 max-h-svh'>
-  <nav class='flex flex-col gap-6 text-xl'>
+<header
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    padding: '1.5rem',
+    maxHeight: '100dvh',
+  }}
+>
+  <nav
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      columnGap: '1.5rem',
+      rowGap: '1.5rem',
+      fontSize: '1.25rem',
+      lineHeight: '1.75rem',
+    }}
+  >
     <a href='/'>
       <Image src={logo} alt='abraham anak agung logo' width={30} height={30} />
     </a>

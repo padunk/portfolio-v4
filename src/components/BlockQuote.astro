@@ -2,8 +2,17 @@
 
 ---
 
-<blockquote class='text-xs italic mb-6 border-l-2 border-primary'>
-  <span class='pl-4 inline-block'>
+<blockquote
+  style={{
+    fontSize: '0.75rem',
+    lineHeight: '1rem',
+    fontStyle: 'italic',
+    marginBottom: '1.5rem',
+    borderLeftWidth: '2px',
+  }}
+  class='border-primary'
+>
+  <span style={{ paddingLeft: '1rem', display: 'inline-block' }}>
     <slot />
   </span>
 </blockquote>

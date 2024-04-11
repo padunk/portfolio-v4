@@ -32,17 +32,17 @@ try {
 ---
 
 <Layout>
-  <div class='text-center mt-16'>
-    <h1 class='text-2xl'>THE BLOG</h1>
+  <div style={{ textAlign: 'center', marginTop: '4rem' }}>
+    <h1 style={{ fontSize: '1.5rem', lineHeight: '2rem' }}>THE BLOG</h1>
     <sub><em>The experience in a text.</em></sub>
   </div>
   <div>
-    <ul class='flex flex-col gap-6'>
+    <ul style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
       {
         postsStatus.status === 'success' && posts.length > 1 ? (
           posts.map((post) => {
             return (
-              <li class=''>
+              <li>
                 <a href={'/blog/' + post.slug.current}>
                   <Card>
                     <CardHeader>
