@@ -12,13 +12,15 @@ import columns from '@/data/projects.json'
     <h2 style='font-size: 1.5rem; line-height: 2rem;'>THE PROJECTS</h2>
     <sub><em>Becoming indie maker.</em></sub>
   </div>
-  <div style='width: 100%; margin-top: 1rem;'>
+  <div
+    style='width: 100%; margin-top: 1rem; display: flex; flex-direction: column; align-items: center;'
+  >
     <small style='display: block; margin-bottom: 0.5rem; padding-left: 0.5rem;'>
       <span>Pro tip:</span>
       <span id='pro-tip'>hold `Shift` when scrolling 🤯</span>
     </small>
     <div
-      style='display: flex; column-gap: 1.5rem; overflow-x: auto; padding: 1.5rem; max-width: 1260px;'
+      style='display: flex; column-gap: 1.5rem; overflow-x: auto; padding: 1.5rem; width: clamp(240px, 100%, 100%);'
       class='shadow-inner drop-shadow-sm bg-neutral-100'
     >
       <CustomCard columns={columns} client:load />
