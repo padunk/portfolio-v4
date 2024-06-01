@@ -78,6 +78,13 @@
     "title": "done",
     "projects": [
       {
+        "id": "CAN02",
+        "title": "The Create",
+        "description": "One create to rule them all",
+        "link": "https://www.npmjs.com/package/@rustyrush/the-create",
+        "result": "V.1.0.2"
+      },
+      {
         "id": "PO04",
         "title": "portfolio",
         "description": "This site use Astro, Shadcn, Sanity, and deploy with Vercel",
@@ -103,7 +110,7 @@
         "title": "Create App Now",
         "description": "One create to rule them all",
         "link": "https://www.npmjs.com/package/create-app-now",
-        "result": "Done. Need updating."
+        "result": "Done. Updated to The Create"
       }
     ]
   },
