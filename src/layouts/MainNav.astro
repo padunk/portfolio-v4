@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets'
 import logo from '@/assets/images/aaa_logo_circle.png'
 const { pathname } = Astro.url
-const defaultNavLinkClass = 'text-opacity-70 hover:text-opacity-100'
+const defaultNavLinkClass = 'text-opacity-100'
 ---
 
 <header
@@ -12,7 +12,7 @@ const defaultNavLinkClass = 'text-opacity-70 hover:text-opacity-100'
     style='display: flex; flex-direction: column; column-gap: 1.5rem; row-gap: 1.5rem; font-size: 1.25rem; line-height: 1.75rem;'
   >
     <a href='/'>
-      <Image src={logo} alt='abraham anak agung logo' width={30} height={30} />
+      <Image src={logo} alt='abraham anak agung logo' width={45} height={45} />
     </a>
     <a
       href='/blog'
