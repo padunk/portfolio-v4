@@ -5,7 +5,7 @@ import { loadEnv } from "vite";
 import react from "@astrojs/react";
 import { sanityIntegration as sanity } from "@sanity/astro";
 import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel/serverless";
+// import vercel from "@astrojs/vercel/serverless";
 
 const { SANITY_PROJECT_ID, SANITY_DATASET } = loadEnv(
   process.env.NODE_ENV,
@@ -23,7 +23,7 @@ export default defineConfig({
     sanity({
       projectId: SANITY_PROJECT_ID,
       dataset: SANITY_DATASET,
-      useCdn: false,
+      useCdn: true,
       // studioBasePath: "/admin",
       // apiVersion: "2023-03-20",
     }),
@@ -32,6 +32,6 @@ export default defineConfig({
     }),
     // icon(),
   ],
-  output: "server",
-  adapter: vercel(),
+  output: "static",
+  // adapter: vercel(),
 });
