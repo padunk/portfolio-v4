@@ -52,16 +52,16 @@ const { title = 'The man and the heron' } = Astro.props
   <!-- <script
       src='https://unpkg.com/htmx.org@1.9.10'
       integrity='sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC'
-      crossorigin='anonymous'></script> -->
+      crossorigin='anonymous'></script>
+    -->
 
   <body id='heron'>
     <div
-      style='display: flex; flex-wrap: wrap; width: 100%; min-height: 100dvh;padding-inline: 1rem;'
-      class='sm:px-12 sm:gap-12 lg:px-24 lg:gap-24'
+      style='display: flex; flex-wrap: wrap; width: 100%; min-height: 100dvh;padding-inline: 1rem; position: relative;'
     >
       <MainNav />
       <main
-        style='display: flex; align-items: center; justify-content: center; flex-direction: column; column-gap: 6rem; margin-bottom: 6rem; margin-inline: auto; width: 100%;'
+        style='display: flex; align-items: center; justify-content: center; flex-direction: column; column-gap: 6rem; margin-block: 6rem; margin-inline: auto; width: 100%;'
       >
         <slot />
       </main>
