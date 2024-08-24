@@ -11,6 +11,9 @@ import List from '@/components/List.astro'
 import ListItem from '@/components/ListItem.astro'
 import { getPost, getPosts } from '@/utils'
 import { ArrowLeftCircle } from 'lucide-react'
+import TitleH3 from '@/components/TitleH3.astro'
+import TitleH4 from '@/components/TitleH4.astro'
+import ListNumber from '@/components/ListNumber.astro'
 
 export async function getStaticPaths() {
   const posts = await getPosts()
@@ -32,11 +35,13 @@ const components = {
     blockquote: BlockQuote,
     h1: Title,
     h2: Title,
+    h3: TitleH3,
+    h4: TitleH4,
     normal: Paragraph,
   },
   list: {
     bullet: List,
-    number: List,
+    number: ListNumber,
   },
   listItem: {
     bullet: ListItem,
