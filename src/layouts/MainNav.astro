@@ -16,6 +16,7 @@ const defaultNavLinkClass = 'text-opacity-100'
       <Image src={logo} alt='abraham anak agung logo' width={45} height={45} />
     </a>
     <a
+      data-astro-prefetch='load'
       href='/blog'
       class:list={[
         defaultNavLinkClass,
@@ -27,6 +28,7 @@ const defaultNavLinkClass = 'text-opacity-100'
       Blog
     </a>
     <a
+      data-astro-prefetch='hover'
       href='/projects'
       class:list={[
         defaultNavLinkClass,

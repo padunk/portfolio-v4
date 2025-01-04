@@ -1,0 +1,56 @@
+---
+import '@/styles/globals.css'
+import { SEO } from 'astro-seo'
+import MainNav from './MainNav.astro'
+import { ViewTransitions } from 'astro:transitions'
+
+interface Props {
+  title?: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang='en' style='min-height: 100dvh;'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='description' content='Abraham Anak Agung personal website' />
+    <meta name='author' content='Abraham Anak Agung' />
+    <meta
+      http-equiv='Content-Security-Policy'
+      content="default-src * 'unsafe-inline'; img-src 'self' http://*; style-src 'self' http://* 'unsafe-inline'; script-src-elem 'self' 'unsafe-inline' blob:"
+    />
+    <SEO
+      title={title}
+      titleTemplate="Abraham's Blog | %s"
+      extend={{
+        link: [
+          { rel: 'icon', href: 'me_and_heron.svg' },
+          {
+            rel: 'manifest',
+            href: 'manifest.json',
+            crossOrigin: 'use-credentials',
+          },
+        ],
+        meta: [{ name: 'generator', content: Astro.generator }],
+      }}
+    />
+  </head>
+
+  <ViewTransitions />
+
+  <body id='heron'>
+    <div
+      style='display: flex; flex-wrap: wrap; width: 100%; min-height: 100dvh;padding-inline: 1rem; position: relative;'
+    >
+      <MainNav />
+      <main
+        style='display: flex; align-items: center; justify-content: center; flex-direction: column; column-gap: 6rem; margin-block: 6rem; margin-inline: auto; width: 100%;'
+      >
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
