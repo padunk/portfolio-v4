@@ -11,13 +11,6 @@
         "result": "in research..."
       },
       {
-        "id": "01FI",
-        "title": "tydiet",
-        "description": "track your daily diet",
-        "link": "",
-        "result": "in research..."
-      },
-      {
         "id": "01ST",
         "title": "coswap",
         "description": "collaborative storytelling and writing",
@@ -52,11 +45,11 @@
     "title": "todo",
     "projects": [
       {
-        "id": "01AN",
-        "title": "anancio",
-        "description": "Smart Ads Generator and Editor",
+        "id": "01FI",
+        "title": "tydiet",
+        "description": "track your daily diet",
         "link": "",
-        "result": "gathering mvp features..."
+        "result": "in research..."
       }
     ]
   },
@@ -65,11 +58,11 @@
     "title": "working",
     "projects": [
       {
-        "id": "02CA",
-        "title": "carin.me",
-        "description": "message from the past",
-        "link": "",
-        "result": "working on it..."
+        "id": "01AN",
+        "title": "trev",
+        "description": "Smart Photo Generator and Editor",
+        "link": "https://nsfwphoto.ai",
+        "result": "building mvp features in Android"
       }
     ]
   },
@@ -77,6 +70,13 @@
     "id": "04",
     "title": "done",
     "projects": [
+      {
+        "id": "02CA",
+        "title": "carin.me",
+        "description": "Scheduled email reminder",
+        "link": "",
+        "result": "Done - not published"
+      },
       {
         "id": "CAN02",
         "title": "The Create",
@@ -86,7 +86,7 @@
       },
       {
         "id": "PO04",
-        "title": "portfolio",
+        "title": "Portfolio",
         "description": "This site use Astro, Shadcn, Sanity, and deploy with Vercel",
         "link": "https://anakagung.com",
         "result": "Upgrading personal portfolio from Sapper."
@@ -113,10 +113,5 @@
         "result": "Done. Updated to The Create"
       }
     ]
-  },
-  {
-    "id": "05",
-    "title": "result",
-    "projects": []
   }
 ]
