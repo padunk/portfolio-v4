@@ -107,6 +107,13 @@
         "result": "V.0.0.7"
       },
       {
+        "id": "01SQ",
+        "title": "Sequre",
+        "description": "Secure QR code generator with AES-256 encryption",
+        "link": "https://sequre.netlify.app/",
+        "result": "Done"
+      },
+      {
         "id": "02CA",
         "title": "carin.me",
         "description": "Scheduled email reminder",
