@@ -20,8 +20,8 @@ import columns from '@/data/projects.json'
       <span id='pro-tip'>hold `Shift` when scrolling 🤯</span>
     </small>
     <div
-      style='display: flex; column-gap: 1.5rem; overflow-x: auto; padding: 1.5rem; width: clamp(240px, 100%, 100%);'
-      class='shadow-inner drop-shadow-md bg-neutral-100'
+      style='display: flex; column-gap: 1.5rem; overflow-x: auto; padding: 1.5rem;'
+      class='shadow-inner drop-shadow-md bg-neutral-100 w-80 sm:w-[400px] md:w-[600px] lg:w-[800px] xl:w-auto'
     >
       <CustomCard columns={columns} client:load />
     </div>
@@ -42,7 +42,6 @@ import columns from '@/data/projects.json'
 </script>
 
 <style>
-  /* TODO: add some backdrop filter later */
   .project-card-wrapper-blur-section::before {
     content: '';
     position: absolute;

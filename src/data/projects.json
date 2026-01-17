@@ -37,13 +37,7 @@
         "description": "bragging platform for developer",
         "link": "",
         "result": "in research..."
-      }
-    ]
-  },
-  {
-    "id": "02",
-    "title": "todo",
-    "projects": [
+      },
       {
         "id": "01FI",
         "title": "tydiet",
@@ -54,15 +48,43 @@
     ]
   },
   {
+    "id": "02",
+    "title": "todo",
+    "projects": [
+      {
+        "id": "01-working",
+        "title": "Lnk3 Dev",
+        "description": "LinkTree alternative for developers",
+        "link": "https://lnk3.dev",
+        "result": "10% done, will publish it this year"
+      },
+      {
+        "id": "02-working",
+        "title": "Trize",
+        "description": "Summary generator for YouTube videos",
+        "link": "https://trize-ai.com",
+        "result": "10% done, will publish it this year"
+      }
+    ]
+  },
+  {
     "id": "03",
     "title": "working",
     "projects": [
       {
-        "id": "01AN",
+        "id": "01-working",
         "title": "trev",
         "description": "Smart Photo Generator and Editor",
         "link": "https://nsfwphoto.ai",
-        "result": "building mvp features in Android"
+        "result": "80% done, will publish it this year"
+      },
+
+      {
+        "id": "03-working",
+        "title": "Jett Notes",
+        "description": "Jett Note is a monolithic note-taking app that allows you to take notes and sync them across all your devices.",
+        "link": "https://jettnote.com",
+        "result": "80% done, will publish it this year"
       }
     ]
   },
@@ -70,6 +92,20 @@
     "id": "04",
     "title": "done",
     "projects": [
+      {
+        "id": "01NNC",
+        "title": "New Normalize CSS",
+        "description": "New Normalize CSS is a tool that helps you normalize your CSS code.",
+        "link": "https://github.com/padunk/new-normalize-css",
+        "result": "Done"
+      },
+      {
+        "id": "01DIS",
+        "title": "dispatch",
+        "description": "Minified Xstate-based state management for React",
+        "link": "https://www.npmjs.com/package/@rustyrush/dispatch",
+        "result": "V.0.0.7"
+      },
       {
         "id": "02CA",
         "title": "carin.me",

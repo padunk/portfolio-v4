@@ -5,6 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import CardWrapper from "./CardWrapper";
 
 type Project = {
   id: string;
@@ -33,37 +34,25 @@ export default function CustomCard({ columns }: { columns: ProjectData[] }) {
               <CardContent>
                 {column.projects.map((project) => {
                   return (
-                    <Card
-                      key={column.id}
-                      className="mb-6 min-w-[240px] transition-transform duration-300 hover:scale-105 hover:shadow-md"
-                    >
-                      <CardHeader>
-                        <CardTitle className="capitalize">
-                          {project.title}
-                        </CardTitle>
-                        <CardDescription className="capitalize">
-                          {project.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent className="flex flex-col gap-6 text-neutral-400 text-sm">
-                        {project.link ? (
-                          <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {project.link}
-                          </a>
-                        ) : (
-                          <p>No link available</p>
-                        )}
-                        <p className="text-sm">
-                          {project.result
-                            ? project.result
-                            : "Result? what result..."}
-                        </p>
-                      </CardContent>
-                    </Card>
+                    <CardWrapper key={column.id} link={project.link}>
+                      <Card className="mb-6 min-w-[240px] transition-transform duration-300 hover:scale-105 hover:shadow-md">
+                        <CardHeader>
+                          <CardTitle className="capitalize">
+                            {project.title}
+                          </CardTitle>
+                          <CardDescription className="capitalize">
+                            {project.description}
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent className="flex flex-col gap-6 text-neutral-400 text-sm">
+                          <p className="text-sm">
+                            {project.result
+                              ? project.result
+                              : "Result? what result..."}
+                          </p>
+                        </CardContent>
+                      </Card>
+                    </CardWrapper>
                   );
                 })}
               </CardContent>
